@@ -1,0 +1,99 @@
+/*main*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+}
+/*header*/
+.head {
+    width: 100%;
+    height: 70px;
+    background-color: #417BD8;
+}
+.head__logo {
+    width: 30%;
+    height: 70px;   
+    float: left;  
+}
+
+.head__logo h1{
+   text-align: center;
+   margin-top: 10px;
+}
+.head__nav {
+    width: 50%;
+    height: 70px;   
+    float: left;
+}
+
+.head__login {
+    width: 19.5%;
+    height: 70px;   
+    float: left;
+}
+
+/*content*/
+.content {
+    width: 100%;
+    height: 100vh;
+}
+
+.content__sidebar {
+    width: 30%;
+    height: 100%;
+    border:1px solid #417BD8;
+    float: left;
+}
+
+.content__block {
+    width: 69.5%;
+    height: 100%;
+    border:1px solid #417BD8;
+    float: left;
+}
+
+.content__block-title {
+    width: 100%;
+    height: 50px;    
+}
+
+.content__block-title h2{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content__block-item {
+    width: 100%;
+    height: auto;   
+
+}
+
+.content__block-img {
+    width: 20%;
+    height: 150px;
+    float: left;
+    background-color: green;
+    margin: 10px;
+}
+
+.content__block-txt {
+    font-weight: 700;
+    padding: 10px;
+}
+
+/*header*/
+.foot {
+    width: 100%;
+    height: 100px;
+    background-color: #002451;
+}
