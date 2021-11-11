@@ -70,8 +70,8 @@ else {
 echo "Вам необходимо пройти авторизацию";
 ?>
 <p>Через 5 секунд будет произведено перенаправление на страницу авторизации</p>
-  <!--  <script> window.setTimeout(function() { window.location = '../chek.php'; }, 5000) </script> -->
+  <script> window.setTimeout(function() { window.location = 'chek.php'; }, 5000) </script> 
 <?php
-header('Location: ../chek.php'); exit();
+//header('Location: chek.php'); exit();
 }
 ?>
