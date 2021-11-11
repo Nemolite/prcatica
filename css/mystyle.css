@@ -11,8 +11,12 @@ h3,
 h4,
 h5,
 h6,
+a,
+label,
+input,
 p {
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .main {
@@ -23,12 +27,12 @@ p {
 /*header*/
 .head {
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: #417bd8;
 }
 .head__logo {
   width: 30%;
-  height: 70px;
+  height: 100px;
   float: left;
 }
 
@@ -38,17 +42,35 @@ p {
 }
 .head__nav {
   width: 50%;
-  height: 70px;
+  height: 100px;
   float: left;
 }
 
 .head__login {
   width: 19.5%;
-  height: 70px;
+  height: 100px;
   float: left;
 }
 
+.head__login ul,
+.head__nav ul {
+  list-style: none;
+  padding-top: 35px;
+}
+
+.head__login li {
+  text-align: center;
+}
+
+.head__login a,
+.head__nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
 /*content*/
+
 .content {
   width: 100%;
   height: 100vh;
@@ -96,7 +118,85 @@ p {
   padding: 10px;
 }
 
-/*header*/
+/*content-sidebar*/
+
+.content__sidebar h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*Страница входа*/
+
+.login {
+  width: 100%;
+  height: 80vh;
+  padding: 50px;
+}
+
+.login-content {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid #002451;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.login-content h3 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.control-label {
+  font-size: 16px;
+}
+
+.login_fix {
+  margin-left: 10px;
+}
+
+.login_form-control {
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-left: 30px;
+}
+
+.checkbox span {
+  margin-left: 15px;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+::-moz-placeholder {
+  padding-left: 10px;
+} /* Firefox 19+ */
+:-moz-placeholder {
+  padding-left: 10px;
+} /* Firefox 18- */
+:-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.login-btn {
+  padding: 10px 30px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/*footer*/
 .foot {
   width: 100%;
   height: 100px;
