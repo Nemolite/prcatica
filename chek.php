@@ -50,7 +50,7 @@
             <form class="registr" role="form" action="chek_control.php" method="post">
                 <div class="form-group">
                     <label for="inputLogin" class="control-label">Логин</label>                   
-                    <input type="text" class="login_form-control login_fix" id="inputLogin" name = "log" placeholder="Логин">                 
+                    <input type="text" class="login_form-control login_fix" id="inputLogin" name = "login" placeholder="Логин">                 
                 </div>
                 <div class="form-group">
                     <label for="inputPass" class="control-label">Пароль</label>                    

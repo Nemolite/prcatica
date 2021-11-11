@@ -7,6 +7,17 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
        
 // unset($_POST['submit']);
 ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Информационный портал</title>
+</head>
+<body>
  <div class="main">        
 
 <header class="head">
@@ -42,8 +53,10 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 
     </div>   
 </header><!--class="head" -->
+<section class="lk_cabinet">
+<h2>Личный кабинет</h2>
+</section>    
 
-Личный кабинет
 <footer class="foot">
 
 </footer><!-- class="foot" -->
