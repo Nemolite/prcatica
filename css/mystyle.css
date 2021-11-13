@@ -73,7 +73,7 @@ p {
 
 .content {
   width: 100%;
-  height: 100vh;
+  height: 1000px;
 }
 
 .content__sidebar {
@@ -102,7 +102,7 @@ p {
 
 .content__block-item {
   width: 100%;
-  height: auto;
+  min-height: 200px;
 }
 
 .content__block-img {
@@ -199,12 +199,39 @@ input[type="checkbox"] {
 /*Личный кабинет*/
 .lk_cabinet {
   width: 100%;
-  height: 80vh;
+  height: 500px;
   padding: 50px;
 }
 
 .lk_cabinet h2 {
   text-align: center;
+}
+
+.lk_cabinet_data {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid #002451;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.btn-form-group {
+  margin-top: 200px;
+}
+
+.lk-art-info {
+  width: 95%;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #002451;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.lk-art-info h3 {
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*footer*/
