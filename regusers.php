@@ -107,7 +107,7 @@ include "connect_db.php";
                     $stmt->bindParam(':pass', $pass , PDO::PARAM_STR);
                     $stmt->bindParam(':fam', $fam , PDO::PARAM_STR);
                     $stmt->bindParam(':name', $name, PDO::PARAM_STR); 
-                    $stmt->bindParam(':type_user', $name, PDO::PARAM_STR);      
+                    $stmt->bindParam(':type_user', $type_user, PDO::PARAM_STR);      
                     $chek = $stmt->execute();
 
                     if($chek){
