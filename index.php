@@ -60,7 +60,7 @@ include "connect_db.php";
                    <h2>Статьи</h2> 
                 </div>
 								<?php
-                $stmt = $pdo->query('SELECT atitle,atxt FROM article');
+                $stmt = $pdo->query('SELECT adate,atitle,atext FROM article');
 								  while ($row = $stmt->fetch())
                    {
 								?>
@@ -69,8 +69,9 @@ include "connect_db.php";
 
                     </div>
                     <h3 class="content__block-txt-top"><?php echo $row['atitle'];?></h3>
+                    <p>Дата публикации: <?php echo $row['adate'];?></p>
                     <p class="content__block-txt">
-										<?php echo $row['atxt'];?>
+										<?php echo $row['atext'];?>
                     </p> 
                    
                 </div>

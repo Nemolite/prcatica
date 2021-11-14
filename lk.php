@@ -74,14 +74,14 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
                 include "connect_db.php";
 
                 $atitle = $_POST['lktitle'];
-                $atxt = $_POST['lktext'];    
+                $atext = $_POST['lktext'];    
                 $adate = date('Y-m-d H:i:s');   
                 
-                $sql = "INSERT INTO article (adate, atitle, atxt) VALUES ( :adate, :atitle, :atxt)";
+                $sql = "INSERT INTO article (adate, atitle, atext) VALUES ( :adate, :atitle, :atext)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->bindParam(':adate', $adate, PDO::PARAM_STR);
                 $stmt->bindParam(':atitle', $atitle, PDO::PARAM_STR);
-                $stmt->bindParam(':atxt', $atxt, PDO::PARAM_STR);       
+                $stmt->bindParam(':atext', $atxt, PDO::PARAM_STR);       
                 $chek = $stmt->execute();
 
                 if($chek){
@@ -92,6 +92,8 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 </section>
 <section class="lk-art-info">
     <h3>Мои статьи</h3>
+
+    
 </section>   
   
 
