@@ -26,6 +26,9 @@ include "connect_db.php";
                     <li>
                         <a href="index.php">Главная страница</a>
                     </li>
+                    <li>
+                        <a href="trin.php">Тренажер</a>
+                    </li>
                 </ul>
             </div>     
             <div class="head__login">

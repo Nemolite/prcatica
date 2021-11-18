@@ -69,6 +69,11 @@ p {
   color: #fff;
 }
 
+.head__nav li {
+  display: inline;
+  margin-left: 10px;
+}
+
 /*content*/
 
 .content {
