@@ -57,6 +57,18 @@ include "connect_db.php";
         <section class="content">
             <div class="content__sidebar">
                 <h2>Разделы</h2>
+                <?php
+                     $cat = $pdo->query('SELECT id,cname FROM category');
+						while ($cat_row = $cat->fetch())
+                        {
+				?>
+                    <p class="category-name" data-id="<?php echo $cat_row['id']?>">
+                    <?php echo $cat_row['cname']?>
+                    </p> 
+                <?php
+				 }
+				?>
+            </div> 
             </div>
             <div class="content__block">
                 <div class="content__block-title">
