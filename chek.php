@@ -11,38 +11,7 @@
 <body>
 <div class="main">        
 
-<header class="head">
-    <div class="head__logo">
-        <h1>Информационный портал</h1>
-    </div>
-    <div class="head__nav">
-        <ul>
-            <li>
-                <a href="index.php">Главная страница</a>
-            </li>
-        </ul>
-    </div>     
-    <div class="head__login">
-
-    <ul>
-
-        <?php if (!empty($_SESSION['id'])) // здесь происходит следующее
-            // если пользователь авторизован направляем его в личный кабинет
-            {?>
-                <li><a  href="lk.php">Личный кабинет</a> </li>
-            <?php }
-            // если же не автоизован направляем его на 
-            // страницу входа в систему
-                else
-            {?>
-            
-                <li><a  href="chek.php">Личный кабинет</a> </li>
-        <?php }?>
-
-    </ul>
-
-    </div>   
-</header><!--class="head" -->
+<?php include "header.php"; ?>
 
 <section class="login">
     <div class="login-content">
@@ -73,9 +42,7 @@
     </div><!-- class="login-content" --> 
 
 </section><!-- class="login" -->
-<footer class="foot">
-
-</footer><!-- class="foot" -->
+<?php include "footer.php"; ?>
 </div>
 <script src="js/myscript.js"></script> 
 </body>
