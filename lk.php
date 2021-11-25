@@ -92,9 +92,38 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 </section>
 <section class="lk-art-info">
     <h3>Мои статьи</h3>
+		<table class="table">
+					<caption>Количество статей</caption>
+					<thead>
+						<tr>
+							<th>№</th>
+							<th>Дата</th>
+							<th>Заголовок</th>
+							<th>Изменить</th>
+							<th>Удалить</th>						
+							
+						</tr>
+					</thead>
+					<tbody>
+					<?php
+                $stmt = $pdo->query('SELECT id,adate, atitle FROM article');
+								  while ($row = $stmt->fetch())
+                   {
+								?>
+						<tr>
+							<td><?php echo $row['id'];?></td>
+							<td><?php echo $row['adate'];?></td>
+							<td><?php echo $row['atitle'];?></td>
+							<td><input type="submit" class="ch-btn">Изменить</input></td>
+							<td><input type="submit" class="ud-btn">Удалить</input></td>						
+						</tr>
+						<?php
+									 }
+								?>										
+					</tbody>
+				</table>
 
-    
-</section>   
+</section> 
   
 
     <footer class="foot">
