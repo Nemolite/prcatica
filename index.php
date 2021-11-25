@@ -10,13 +10,13 @@ include "connect_db.php";
             <div class="content__sidebar">
                 <h2>Разделы</h2>
 								<?php
-                $cat = $pdo->query('SELECT cid,cname FROM category');
+                $cat = $pdo->query('SELECT id,cname FROM category');
 								  while ($row_cat = $cat->fetch())
                    {
 										 
 								?>
 									<p>
-									<a href="http://prcatica-main/index.php?id=<?php echo $row_cat['cid']; ?>">
+									<a href="http://practica.local/index.php?id=<?php echo $row_cat['id']; ?>">
 									<?php echo $row_cat['cname']; ?>		
 								</a>
 									</p>
@@ -32,7 +32,7 @@ WHERE category.cid=1
 */
 								?>
 								<p>
-									 <a href="http://prcatica-main/index.php?id=0">
+									 <a href="http://practica.local/index.php?id=0">
 									 Все статьи	
 								   </a>
 								</p>
@@ -68,7 +68,7 @@ WHERE category.cid=1
 										$sqlin = 'SELECT article.atitle, article.atext,category.cname FROM article LEFT JOIN art_cat ON article.id=art_cat.art_id LEFT JOIN category ON art_cat.cat_id=category.cid WHERE category.cid=3';
 										$stmt = $pdo->query($sqlin);
                     */
-										$stmt = $pdo->prepare('SELECT article.atitle, article.atext,category.cname FROM article LEFT JOIN art_cat ON article.id=art_cat.art_id LEFT JOIN category ON art_cat.cat_id=category.cid WHERE category.cid = ?');
+										$stmt = $pdo->prepare('SELECT article.atitle, article.atext,category.cname FROM article LEFT JOIN art_cat ON article.aid=art_cat.art_id LEFT JOIN category ON art_cat.cat_id=category.id WHERE category.id = ?');
                     $stmt->execute(array($_GET['id']));
 
 										while ($row = $stmt->fetch())

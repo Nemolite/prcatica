@@ -20,38 +20,8 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 <body>
  <div class="main">        
 
-<header class="head">
-    <div class="head__logo">
-        <h1>Информационный портал</h1>
-    </div>
-    <div class="head__nav">
-        <ul>
-            <li>
-                <a href="index.php">Главная страница</a>
-            </li>
-        </ul>
-    </div>     
-    <div class="head__login">
+ <?php include "header.php"; ?>
 
-    <ul>
-
-        <?php if (!empty($_SESSION['id'])) // здесь происходит следующее
-            // если пользователь авторизован направляем его в личный кабинет
-            {?>
-                <li><a  href="lk.php">Личный кабинет</a> </li>
-            <?php }
-            // если же не автоизован направляем его на 
-            // страницу входа в систему
-                else
-            {?>            
-                <li><a  href="chek.php">Личный кабинет</a> </li>
-        <?php }?>
-
-    </ul>
-
-
-    </div>   
-</header><!--class="head" -->
 <section class="lk_cabinet">
     <h2>Личный кабинет</h2>
          <div class="lk_cabinet_data">
@@ -70,7 +40,7 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
               
             </form>
             <?php
-                print_r($_POST);
+                //print_r($_POST);
                 include "connect_db.php";
 
                 $atitle = $_POST['lktitle'];
@@ -81,7 +51,7 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
                 $stmt = $pdo->prepare($sql);
                 $stmt->bindParam(':adate', $adate, PDO::PARAM_STR);
                 $stmt->bindParam(':atitle', $atitle, PDO::PARAM_STR);
-                $stmt->bindParam(':atext', $atxt, PDO::PARAM_STR);       
+                $stmt->bindParam(':atext', $atext, PDO::PARAM_STR);       
                 $chek = $stmt->execute();
 
                 if($chek){
@@ -106,16 +76,16 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 					</thead>
 					<tbody>
 					<?php
-                $stmt = $pdo->query('SELECT id,adate, atitle FROM article');
+                $stmt = $pdo->query('SELECT aid,adate, atitle FROM article');
 								  while ($row = $stmt->fetch())
                    {
 								?>
 						<tr>
-							<td><?php echo $row['id'];?></td>
+							<td><?php echo $row['aid'];?></td>
 							<td><?php echo $row['adate'];?></td>
 							<td><?php echo $row['atitle'];?></td>
-							<td><input type="submit" class="ch-btn">Изменить</input></td>
-							<td><input type="submit" class="ud-btn">Удалить</input></td>						
+							<td><input type="submit" class="ch-btn" value="Изменить"></td>
+							<td><input type="submit" class="ud-btn" value="Удалить"></td>						
 						</tr>
 						<?php
 									 }
@@ -123,11 +93,11 @@ if (!empty($_SESSION['id'])) { //id достаем из сессии
 					</tbody>
 				</table>
 
-</section> 
+</section>   
+   
   
 
-    <footer class="foot">
-    </footer><!-- class="foot" -->
+<?php include "footer.php"; ?>
 </div>
 <script src="js/myscript.js"></script>    
 </body>
